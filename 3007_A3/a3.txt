@@ -1,0 +1,57 @@
+The outline of the assignment:
+It has label to separate each question's functions individually:
+-Question xx
+  - Main function
+    - Its support functions
+At the very bottom, all general support functions are written there.
+
+Commands to test question 1:
+General form:
+-- ** containNode node graph ** --
+    Example:
+      containNode 1 (Union (Union(Single 1)(Single 3)[(1, 3)])(Union(Single 2)(Single 4)[(4, 2)])[(1, 4), (2, 1), (3, 2)])
+      containNode 5 (Union (Union(Single 1)(Single 3)[(1, 3)])(Union(Single 2)(Single 4)[(4, 2)])[(1, 4), (2, 1), (3, 2)])
+
+Commands to test question 2:
+General form:
+-- ** containNode edge graph ** --
+    Example:
+      containEdge (1,4) (Union (Union(Single 1)(Single 3)[(1, 3)])(Union(Single 2)(Single 4)[(4, 2)])[(1, 4), (2, 1), (3, 2)])
+      containEdge (1,2) (Union (Union(Single 1)(Single 3)[(1, 3)])(Union(Single 2)(Single 4)[(4, 2)])[(1, 4), (2, 1), (3, 2)])
+
+Commands to test question 3:
+General form:
+-- ** listAllNodes graph ** --
+    Example:
+      listAllNodes (Union (Union(Single 1)(Single 3)[(1, 3)])(Union(Single 2)(Single 4)[(4, 2)])[(1, 4), (2, 1), (3, 2)])
+
+Commands to test question 4:
+General form:
+-- ** listAllEdges graph ** --
+    Example:
+      listAllEdges (Union (Union(Single 1)(Single 3)[(1, 3)])(Union(Single 2)(Single 4)[(4, 2)])[(1, 4), (2, 1), (3, 2)])
+
+Commands to test question 5:
+General form:
+-- ** checkForSingleton graph ** --
+    Example:
+      checkForSingleton (Union (Single 1)(Union(Single 2)(Union(Single 3)(Single 4)[])[(4, 2)])[ (1, 4), (2, 1)]) (is True because node 3 has no edges)
+      checkForSingleton (Union (Single 1)(Union(Single 2)(Union(Single 3)(Single 4)[])[(3, 2), (4, 2)])[(1, 3), (1, 4), (2, 1)]) (the original one is not a singleton)
+
+Commands to test question 6:
+General form:
+-- ** breadthFirstSearch graph (start node) ** --
+    Example:
+      breadthFirstSearch (Union (Single 1)(Union(Single 2)(Union(Single 3)(Single 4)[])[(3, 2), (4, 2)])[(1, 3), (1, 4), (2, 1)]) 1
+
+Commands to test question 7:
+General form:
+-- ** createAGraphFromAList [(Node,[Node])] ** --
+    Example:
+      createAGraphFromAList [(1, [3, 4]), (2, [1]), (3, [2]), (4, [2])]
+
+Commands to test question 8:
+General form:
+-- ** generateGraph [[Bool]] ** --
+    Example:
+      createAGraphFromAMatrix [[False, False, True, True], [True, False, False, False],[False, True, False, False], [False, True, False, False]]
